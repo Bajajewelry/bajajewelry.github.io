@@ -1,13 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    background: url('images/hero-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     color: #fff;
+    background: url('images/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
 }
 
-/* Consistent Navigation Header */
+/* Navigation Styling */
 nav {
     background-color: #111;
     padding: 10px;
@@ -22,6 +24,8 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -33,6 +37,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 nav ul li a:hover,
@@ -40,33 +45,100 @@ nav ul li a.active {
     color: #f2a04e;
 }
 
-/* Adjust BAJA Jewelry Header */
+/* Page Titles */
 header h1 {
-    font-size: 2.5em;
-    margin-top: 100px;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Section Padding */
+section {
+    padding: 50px 20px;
     text-align: center;
 }
 
-/* General Page Style */
-.projects, .about-us, .contact, .get-estimate {
-    padding: 50px 20px;
-    text-align: center;
+/* Projects Styling */
+.projects h2, .about-us h2, .contact h2, .get-estimate h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.projects p, .about-us p, .contact p, .get-estimate p {
+    font-size: 1.2em;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-gallery img {
+    width: 150px; /* Adjust size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
     background-color: #111;
-    color: #fff;
     padding: 20px 0;
     text-align: center;
+    color: #fff;
+    margin-top: 50px;
 }
 
-/* Ensure Background Image on All Pages */
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #f2a04e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .project-gallery {
+        flex-direction: column;
+    }
+    .project-gallery img {
+        width: 200px; /* Larger size on smaller screens */
+    }
+}
+
+/* Background on Other Pages */
 body:not(.home) {
-    background-image: url('images/hero-bg.jpg');
+    background: url('images/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-/* Add Class for Active Tab */
+/* Consistent Padding Across Pages */
+header, .projects, .about-us, .contact, .get-estimate {
+    padding: 80px 20px;
+}
+
+/* Active Tab Styling */
 .active {
     border-bottom: 3px solid #f2a04e;
 }
