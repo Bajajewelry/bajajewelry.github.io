@@ -1,20 +1,27 @@
+/* Body and General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+    background-image: url('images/hero-bg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
 /* Navbar Styling */
 .navbar {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    background-color: #000; 
+    color: #fff; 
     padding: 20px;
-    position: fixed; /* Fixed position */
-    top: 0; /* Align to the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Make sure it stays on top */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
 }
 
-/* Adjust padding on body to account for fixed navbar */
-body {
-    padding-top: 80px; /* Adjust if your navbar height changes */
-}
-
-/* Navbar links */
 .navbar ul {
     display: flex;
     list-style: none;
@@ -33,5 +40,73 @@ body {
 
 .navbar ul li a:hover, 
 .navbar ul li a.active {
-    color: #FF9900; /* Highlight active or hovered links */
+    color: #FF9900;
+}
+
+/* General Section Styling */
+section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Contact Page Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #FF9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e68a00;
 }
