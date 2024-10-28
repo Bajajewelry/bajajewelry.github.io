@@ -29,63 +29,36 @@ nav ul li a {
     font-weight: bold;
 }
 
-.projects {
+.hero {
+    text-align: center;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    padding: 50px 0;
+    color: white;
+}
+
+.featured-projects {
     text-align: center;
     padding: 50px 20px;
 }
 
-.projects h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.projects p {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.carousel {
-    position: relative;
+.project-gallery {
     display: flex;
-    align-items: center;
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.carousel-container {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.carousel img {
-    min-width: 200px;
+.project-gallery img {
+    width: 100px; /* Resim genişliğini küçültmek için 100px olarak ayarladım */
     height: auto;
-    margin: 0 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
     cursor: pointer;
-    font-size: 18px;
-    z-index: 10;
+    transition: transform 0.2s;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+.project-gallery img:hover {
+    transform: scale(1.05);
 }
 
 footer {
