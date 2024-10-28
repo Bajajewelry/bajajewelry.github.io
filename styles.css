@@ -1,22 +1,36 @@
-body, html {
-    margin: 0;
-    padding: 0;
+/* Apply the background image to all pages */
+body {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
+    color: #ffffff; /* Adjust if needed for better contrast */
+    padding: 0;
+    margin: 0;
 }
 
+/* General layout and text styling */
 header {
     background-color: #222;
-    color: white;
     padding: 10px;
     text-align: center;
 }
 
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffffff;
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
+    background-color: #222;
 }
 
 nav ul li {
@@ -24,32 +38,59 @@ nav ul li {
 }
 
 nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+/* Hero section styling */
 .hero {
+    padding: 60px 20px;
     text-align: center;
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    padding: 50px 0;
-    color: white;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5); /* Add overlay for readability */
 }
 
-.featured-projects, .projects {
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Projects styling */
+.projects {
     text-align: center;
     padding: 50px 20px;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.projects p {
+    font-size: 1.2em;
+    color: #eeeeee;
+    margin-bottom: 30px;
 }
 
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .project-gallery img {
-    width: 120px; /* Daha küçük bir genişlik ayarladım */
+    width: 150px; /* Adjusted size to match the home page */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -61,15 +102,72 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-footer {
-    background-color: #222;
-    color: white;
+/* About Us section */
+.about-us {
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.social-media img {
-    width: 30px;
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    color: #dddddd;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+    max-width: 800px;
+}
+
+.about-us img {
+    width: 80%;
+    max-width: 600px;
     height: auto;
-    margin: 0 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .projects, .about-us, .hero {
+        padding: 30px 10px;
+    }
+
+    .project-gallery img {
+        width: 120px; /* Smaller size for mobile */
+    }
 }
