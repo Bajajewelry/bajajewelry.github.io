@@ -2,10 +2,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
 }
 
-/* Header */
 header {
     background-color: #222;
     color: white;
@@ -31,7 +29,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
@@ -39,23 +36,23 @@ nav ul li a {
     color: white;
 }
 
-/* Project Gallery */
 .featured-projects {
     text-align: center;
     padding: 50px 20px;
 }
 
 .project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .project-gallery img {
-    width: 100%;
+    width: 150px; /* Adjusted width */
     height: auto;
-    max-width: 120px; /* Smaller maximum width for images */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -63,24 +60,25 @@ nav ul li a {
 }
 
 .project-gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
+.projects {
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 20px;
 }
 
-.social-media img {
-    width: 30px;
-    height: auto;
-    margin: 0 5px;
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-/* About Us Section */
+.projects p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
 .about-us {
     text-align: center;
     padding: 50px 20px;
@@ -107,4 +105,17 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media img {
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
 }
