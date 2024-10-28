@@ -1,60 +1,93 @@
-/* General Styles */
-body {
-    background-color: #000; /* Solid background for better readability */
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+/* Reset and base styles */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-.header, .about-us, .projects, .estimate, .contact, footer {
-    background-color: #000; /* Uniform solid background across sections */
-    padding: 60px 20px;
+a {
+    color: #ffc107;
+    text-decoration: none;
 }
 
+a:hover {
+    color: #fff;
+}
+
+/* Container for main content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #222; /* Header background color */
+    background: #222;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
 }
 
 header h1 {
-    font-size: 2em;
-    color: #fff;
     margin: 0;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1em;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-header nav a.active {
-    color: #ffa500; /* Highlight the active page */
-}
-
-.about-us h2, .projects h2, .estimate h2, .contact h2, footer h2 {
     font-size: 2.5em;
-    text-align: center;
-    color: #fff;
 }
 
-.about-us p, .projects p, .estimate p, .contact p, footer p {
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
     font-size: 1.2em;
-    color: #bbb;
-    line-height: 1.6;
-    text-align: center;
 }
 
-/* Project Gallery */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Featured Projects */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -63,83 +96,46 @@ header nav a.active {
 }
 
 .project-gallery img {
-    width: 150px; /* Smaller image size for better layout */
-    height: auto;
+    max-width: 200px;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
 }
 
 .project-gallery img:hover {
     transform: scale(1.05);
 }
 
-/* Form Styling */
+/* Forms and interactive elements */
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
-form input, form textarea, form button {
+form input, form textarea {
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
-    font-size: 1em;
     border: none;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
 }
 
-form button {
-    background-color: #ffa500;
+form input[type="submit"] {
+    background: #ffc107;
+    color: #000;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background 0.3s ease;
 }
 
-form button:hover {
-    background-color: #ff8500;
+form input[type="submit"]:hover {
+    background: #ff9800;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-}
-
-footer a {
-    color: #ffa500;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Media Queries */
+/* Hide background image on mobile */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project-gallery {
-        flex-direction: column;
-    }
-
-    form input, form textarea, form button {
-        width: 100%;
+    body {
+        background-image: none;
     }
 }
-
-/* Optional Background Image - Disabled for now */
-/*
-body {
-    background: url('images/hero-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-*/
