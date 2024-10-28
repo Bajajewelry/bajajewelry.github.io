@@ -47,15 +47,15 @@ nav ul li a {
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
     padding: 20px;
 }
 
 .project-gallery img {
     width: 100%;
     height: auto;
-    max-width: 150px;
+    max-width: 120px; /* Smaller maximum width for images */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -63,7 +63,7 @@ nav ul li a {
 }
 
 .project-gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* Footer */
