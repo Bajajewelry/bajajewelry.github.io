@@ -1,52 +1,57 @@
-/* Body and General Styling */
+/* General Styles */
 body {
+    background-color: #000; /* Solid background for better readability */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    padding-top: 80px;
-    background-image: url('images/hero-bg.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #333;
-}
-
-/* Navbar Styling */
-.navbar {
-    background-color: #000; 
-    color: #fff; 
-    padding: 20px;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 30px;
     padding: 0;
+}
+
+.header, .about-us, .projects, .estimate, .contact, footer {
+    background-color: #000; /* Uniform solid background across sections */
+    padding: 60px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #222; /* Header background color */
+}
+
+header h1 {
+    font-size: 2em;
+    color: #fff;
     margin: 0;
 }
 
-.navbar ul li a {
+header nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
+    margin: 0 15px;
+    font-size: 1em;
 }
 
-.navbar ul li a:hover, 
-.navbar ul li a.active {
-    color: #FF9900;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-/* General Section Styling */
-section {
+header nav a.active {
+    color: #ffa500; /* Highlight the active page */
+}
+
+.about-us h2, .projects h2, .estimate h2, .contact h2, footer h2 {
+    font-size: 2.5em;
     text-align: center;
-    padding: 50px 20px;
+    color: #fff;
+}
+
+.about-us p, .projects p, .estimate p, .contact p, footer p {
+    font-size: 1.2em;
+    color: #bbb;
+    line-height: 1.6;
+    text-align: center;
 }
 
 /* Project Gallery */
@@ -58,10 +63,10 @@ section {
 }
 
 .project-gallery img {
-    width: 200px;
+    width: 150px; /* Smaller image size for better layout */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -70,43 +75,71 @@ section {
     transform: scale(1.05);
 }
 
-/* Footer Styling */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-/* Contact Page Styling */
-.contact-form {
+/* Form Styling */
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 80%;
-    max-width: 600px;
+form input, form textarea, form button {
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
     font-size: 1em;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #FF9900;
-    color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #333;
+    color: #fff;
 }
 
-.contact-form button:hover {
-    background-color: #e68a00;
+form button {
+    background-color: #ffa500;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
+
+form button:hover {
+    background-color: #ff8500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+footer a {
+    color: #ffa500;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-gallery {
+        flex-direction: column;
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+    }
+}
+
+/* Optional Background Image - Disabled for now */
+/*
+body {
+    background: url('images/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+*/
