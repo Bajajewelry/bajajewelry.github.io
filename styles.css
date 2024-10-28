@@ -1,11 +1,10 @@
-/* Ensure the background image is applied to the entire page */
-html, body {
-    height: 100%;
+/* Global Background */
+body {
     background: url('images/hero-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
     font-family: Arial, sans-serif;
     color: #ffffff; /* Adjust if needed for better contrast */
+    margin: 0;
 }
 
 /* General layout and text styling */
