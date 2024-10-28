@@ -1,19 +1,16 @@
-/* Apply the background image to all pages */
-body {
-    background-image: url('images/hero-bg.jpg');
+/* Ensure the background image is applied to the entire page */
+html, body {
+    height: 100%;
+    background: url('images/hero-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin: 0;
     font-family: Arial, sans-serif;
     color: #ffffff; /* Adjust if needed for better contrast */
-    padding: 0;
-    margin: 0;
 }
 
 /* General layout and text styling */
 header {
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay for better readability */
     padding: 10px;
     text-align: center;
 }
@@ -30,7 +27,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 nav ul li {
@@ -134,7 +131,7 @@ nav ul li a:hover {
 
 /* Footer styling */
 footer {
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     text-align: center;
     padding: 20px 10px;
@@ -149,12 +146,6 @@ footer a {
 
 footer a:hover {
     color: #ffffff;
-}
-
-footer img {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
 }
 
 /* Adjustments for smaller screens */
