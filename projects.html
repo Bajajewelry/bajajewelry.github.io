@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAJA Jewelry Projects</title>
+    <title>Projects - BAJA Jewelry</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,23 +23,19 @@
     <section class="projects">
         <h2>Some of Our Projects</h2>
         <p>Your private jeweler!</p>
-        <div class="carousel">
-            <button class="prev">&#10094;</button>
-            <div class="carousel-container">
-                <img src="images/project1-300.png" alt="Jewelry Design 1">
-                <img src="images/project1-301.png" alt="Jewelry Design 2">
-                <img src="images/project1-302.png" alt="Jewelry Design 3">
-                <img src="images/project1-303.png" alt="Jewelry Design 4">
-                <img src="images/project1-304.png" alt="Jewelry Design 5">
-                <img src="images/project1-305.png" alt="Jewelry Design 6">
-                <img src="images/project1-306.png" alt="Jewelry Design 7">
-                <img src="images/project1-307.png" alt="Jewelry Design 8">
-                <img src="images/project1-308.png" alt="Jewelry Design 9">
-                <img src="images/project1-309.png" alt="Jewelry Design 10">
-                <img src="images/project1-310.png" alt="Jewelry Design 11">
-                <!-- Devam eden resimler buraya eklenecek -->
-            </div>
-            <button class="next">&#10095;</button>
+        <div class="project-gallery">
+            <img src="images/project1-300.png" alt="Jewelry Design 1">
+            <img src="images/project1-301.png" alt="Jewelry Design 2">
+            <img src="images/project1-302.png" alt="Jewelry Design 3">
+            <img src="images/project1-303.png" alt="Jewelry Design 4">
+            <img src="images/project1-304.png" alt="Jewelry Design 5">
+            <img src="images/project1-305.png" alt="Jewelry Design 6">
+            <img src="images/project1-306.png" alt="Jewelry Design 7">
+            <img src="images/project1-307.png" alt="Jewelry Design 8">
+            <img src="images/project1-308.png" alt="Jewelry Design 9">
+            <img src="images/project1-309.png" alt="Jewelry Design 10">
+            <img src="images/project1-310.png" alt="Jewelry Design 11">
+            <!-- Daha fazla resim eklemek için bu yapıyı kullanın -->
         </div>
     </section>
 
@@ -48,42 +44,9 @@
         <p>608 South Hill St Suite 507, Los Angeles, CA, United States 90014</p>
         <p>(213) 623-4696</p>
         <div class="social-media">
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
         </div>
     </footer>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
-<script>
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const carouselContainer = document.querySelector('.carousel-container');
-
-let index = 0;
-
-next.addEventListener('click', () => {
-    index++;
-    if (index > carouselContainer.childElementCount - 1) {
-        index = 0;
-    }
-    updateCarousel();
-});
-
-prev.addEventListener('click', () => {
-    index--;
-    if (index < 0) {
-        index = carouselContainer.childElementCount - 1;
-    }
-    updateCarousel();
-});
-
-function updateCarousel() {
-    const imageWidth = carouselContainer.querySelector('img').clientWidth;
-    carouselContainer.style.transform = `translateX(${-index * (imageWidth + 20)}px)`;
-}
-
-</script>
 </body>
 </html>
