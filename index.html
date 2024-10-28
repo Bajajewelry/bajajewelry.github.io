@@ -46,3 +46,17 @@
     </footer>
 </body>
 </html>
+html
+Copy code
+<script>
+    // Get current URL path
+    const path = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    navLinks.forEach(link => {
+        // Highlight based on URL path match
+        if (link.href.includes(path)) {
+            link.classList.add('active');
+        }
+    });
+</script>
