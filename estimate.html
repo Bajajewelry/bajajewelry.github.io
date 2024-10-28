@@ -16,14 +16,24 @@
     </div>
 
     <section>
-        <h2>Your Personal Jewelry Store</h2>
-        <p>Get an estimate for your custom jewelry piece by contacting us today.</p>
+        <h2>Get an Estimate</h2>
+        <p>Provide details about your custom jewelry request, and we'll get back to you with an estimate.</p>
+        <form class="estimate-form" action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="details" placeholder="Describe your design or request" required></textarea>
+            <label for="file-upload" class="custom-file-upload">
+                <input type="file" name="designFile" id="file-upload" accept=".jpg, .jpeg, .png, .gif, .pdf, .stl, .3dm">
+                Attach Design File (optional)
+            </label>
+            <button type="submit">Submit Request</button>
+        </form>
     </section>
 
     <footer>
         © 2024 BAJA Jewelry. All Rights Reserved.<br>
         608 South Hill St Suite 507, Los Angeles, CA, United States 90014<br>
-        (213) 623-4696
+        <a href="https://goo.gl/maps/2s1e5db9ndR2" target="_blank">(213) 623-4696</a>
     </footer>
 </body>
 </html>
