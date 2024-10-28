@@ -1,163 +1,72 @@
-/* Global Background */
 body {
+    font-family: Arial, sans-serif;
     background: url('images/hero-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
-    color: #ffffff; /* Adjust if needed for better contrast */
     margin: 0;
+    padding: 0;
+    color: #fff;
 }
 
-/* General layout and text styling */
-header {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay for better readability */
+/* Consistent Navigation Header */
+nav {
+    background-color: #111;
     padding: 10px;
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #d4af37;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f2a04e;
 }
 
-/* Hero section styling */
-.hero {
-    padding: 60px 20px;
-    text-align: center;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5); /* Add overlay for readability */
-}
-
-.hero h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-/* Projects styling */
-.projects {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.projects h2 {
+/* Adjust BAJA Jewelry Header */
+header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.projects p {
-    font-size: 1.2em;
-    color: #eeeeee;
-    margin-bottom: 30px;
-}
-
-.project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.project-gallery img {
-    width: 150px; /* Adjusted size to match the home page */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.project-gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* About Us section */
-.about-us {
+    margin-top: 100px;
     text-align: center;
+}
+
+/* General Page Style */
+.projects, .about-us, .contact, .get-estimate {
     padding: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
 
-.about-us h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.about-us p {
-    font-size: 1.2em;
-    color: #dddddd;
-    line-height: 1.6;
-    margin: 0 auto 20px;
-    max-width: 800px;
-}
-
-.about-us img {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-}
-
-/* Footer styling */
+/* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
 }
 
-footer a {
-    color: #d4af37;
-    text-decoration: none;
-    transition: color 0.3s;
+/* Ensure Background Image on All Pages */
+body:not(.home) {
+    background-image: url('images/hero-bg.jpg');
 }
 
-footer a:hover {
-    color: #ffffff;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .projects, .about-us, .hero {
-        padding: 30px 10px;
-    }
-
-    .project-gallery img {
-        width: 120px; /* Smaller size for mobile */
-    }
+/* Add Class for Active Tab */
+.active {
+    border-bottom: 3px solid #f2a04e;
 }
