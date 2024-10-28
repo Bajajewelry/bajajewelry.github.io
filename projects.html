@@ -56,3 +56,34 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+<script>
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const carouselContainer = document.querySelector('.carousel-container');
+
+let index = 0;
+
+next.addEventListener('click', () => {
+    index++;
+    if (index > carouselContainer.childElementCount - 1) {
+        index = 0;
+    }
+    updateCarousel();
+});
+
+prev.addEventListener('click', () => {
+    index--;
+    if (index < 0) {
+        index = carouselContainer.childElementCount - 1;
+    }
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const imageWidth = carouselContainer.querySelector('img').clientWidth;
+    carouselContainer.style.transform = `translateX(${-index * (imageWidth + 20)}px)`;
+}
+
+</script>
+</body>
+</html>
