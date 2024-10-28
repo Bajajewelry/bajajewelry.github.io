@@ -66,3 +66,39 @@ footer {
     height: auto;
     margin: 0 5px;
 }
+.projects {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.projects p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
