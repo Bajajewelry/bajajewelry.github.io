@@ -1,31 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAJA Jewelry</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>BAJA Jewelry</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="estimate.html">Get an Estimate</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="estimate.html">Get an Estimate</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
-    <section class="hero">
-        <h2>Private Custom Jewelry Since 1989</h2>
+    <section>
+        <h1>Private Custom Jewelry Since 1989</h1>
         <p>We offer personalized services with our unique jewelry designs. We're here to help you create your perfect piece.</p>
-    </section>
-
-    <section class="featured-projects">
         <h2>Featured Projects</h2>
         <div class="project-gallery">
             <img src="images/project1-300.png" alt="Jewelry Design 1">
@@ -36,27 +28,9 @@
     </section>
 
     <footer>
-        <p>© 2024 BAJA Jewelry. All Rights Reserved.</p>
-        <p>608 South Hill St Suite 507, Los Angeles, CA, United States 90014</p>
-        <p>(213) 623-4696</p>
-        <div class="social-media">
-            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
-        </div>
+        © 2024 BAJA Jewelry. All Rights Reserved.<br>
+        608 South Hill St Suite 507, Los Angeles, CA, United States 90014<br>
+        (213) 623-4696
     </footer>
 </body>
 </html>
-html
-Copy code
-<script>
-    // Get current URL path
-    const path = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav ul li a');
-    
-    navLinks.forEach(link => {
-        // Highlight based on URL path match
-        if (link.href.includes(path)) {
-            link.classList.add('active');
-        }
-    });
-</script>
