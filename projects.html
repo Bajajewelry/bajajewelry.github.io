@@ -17,8 +17,8 @@
     <section>
         <h2>Some of Our Projects</h2>
         <p>Your private jeweler!</p>
-        <div class="project-gallery">
-            <!-- Resimler daha küçük boyutta gösterilecek -->
+        <div class="project-gallery projects-only" id="gallery">
+            <!-- Resimler JavaScript ile rastgele sıraya göre yüklenecek -->
             <img src="images/project1-300.png" alt="Jewelry Design 1">
             <img src="images/project1-301.png" alt="Jewelry Design 2">
             <img src="images/project1-302.png" alt="Jewelry Design 3">
@@ -33,5 +33,18 @@
         608 South Hill St Suite 507, Los Angeles, CA, United States 90014<br>
         (213) 623-4696
     </footer>
+
+    <script>
+        // Rastgele resim sıralaması için JavaScript kodu
+        window.addEventListener("DOMContentLoaded", () => {
+            const gallery = document.getElementById("gallery");
+            const images = Array.from(gallery.querySelectorAll("img"));
+            gallery.innerHTML = "";
+
+            // Resimleri rastgele sırayla yeniden ekle
+            images.sort(() => 0.5 - Math.random());
+            images.forEach(img => gallery.appendChild(img));
+        });
+    </script>
 </body>
 </html>
