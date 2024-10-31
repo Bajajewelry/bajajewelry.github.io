@@ -1,15 +1,8 @@
-/* Genel Ayarlar */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-}
-
-h1, h2, h3 {
-    font-weight: 600;
 }
 
 .navbar {
@@ -21,70 +14,79 @@ h1, h2, h3 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar ul li {
-    display: inline;
+    padding: 14px 20px;
 }
 
 .navbar ul li a {
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
-    display: inline-block;
+    font-size: 16px;
 }
 
 .navbar ul li a:hover, .navbar ul li a.active {
     background-color: #4CAF50;
     color: white;
+    border-radius: 5px;
 }
 
-/* Ana Sayfa (index.html) */
-section {
-    padding: 20px;
+h1, h2 {
+    text-align: center;
 }
 
 .project-gallery {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .project-gallery img {
-    width: 800px; /* Ana sayfa için resim boyutu */
-    max-width: 100%;
+    width: 200px;
     height: auto;
-    display: block;
-    margin: 0 auto; /* Resmi ortala */
+    border-radius: 10px;
 }
 
-/* Project Sayfası (projects.html) */
-.project-gallery img {
-    width: 200px; /* Project sayfasında resimleri küçült */
-    height: auto;
-    margin: 5px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
-    font-size: 0.8em;
-}
-
-/* Contact Us Sayfası */
-.contact-section {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
-.contact-form {
-    margin-bottom: 30px; /* Form ile harita arasında boşluk */
+.form-link {
     display: inline-block;
-    text-align: left;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-.map-container {
-    margin-top: 30px;
+.form-link:hover {
+    background-color: #45a049;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-gallery img.random {
+    width: 200px;
+    height: auto;
+}
+
+/* Center image on the index page */
+.index-gallery img {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+    height: auto;
 }
