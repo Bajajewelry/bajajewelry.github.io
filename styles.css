@@ -78,15 +78,17 @@ section {
     text-align: center;
 }
 
-.project-gallery img.random {
-    width: 200px;
-    height: auto;
-}
-
-/* Center image on the index page */
+/* Center and enlarge the image on the index page */
 .index-gallery img {
     display: block;
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px; /* Adjusted to make the image larger */
     height: auto;
+}
+
+/* Adjustments for the contact form link */
+.contact-section .form-link {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 12px 25px;
 }
