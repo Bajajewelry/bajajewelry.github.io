@@ -1,13 +1,11 @@
-/* Genel sayfa ayarları */
+/* Genel stiller */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333;
 }
 
-/* Navbar */
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -17,66 +15,44 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .navbar ul li {
     display: inline;
+    padding: 15px;
 }
 
 .navbar ul li a {
-    color: white;
-    padding: 14px 20px;
+    color: #ffffff;
     text-decoration: none;
-    display: block;
-}
-
-.navbar ul li a:hover {
-    background-color: #555;
 }
 
 .navbar ul li a.active {
     background-color: #4CAF50;
 }
 
-/* Başlık ve paragraf */
-section {
-    padding: 60px;
+h1, h2, p {
     text-align: center;
+    color: #333;
 }
 
-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-/* Sadece index.html'deki projeye özgü görsel */
-.index-only img {
-    width: 1200px; /* Yalnızca index.html'deki görsel için genişlik daha da artırıldı */
+/* Sadece index.html için büyük görsel */
+.project-gallery.index-only img {
+    width: 800px;
     height: auto;
-    margin: 10px;
-    border-radius: 8px;
 }
 
-/* Project sayfası için küçük boyutlu görseller */
+/* Diğer sayfalardaki proje görselleri */
 .project-gallery img {
-    width: 200px; /* Project sayfasındaki tüm görsellerin genişliğini küçülttük */
+    width: 200px;
     height: auto;
-    margin: 10px;
-    border-radius: 8px;
 }
 
-/* Footer */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 14px;
 }
