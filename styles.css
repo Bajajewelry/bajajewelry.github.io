@@ -37,10 +37,15 @@ h1, h2, p {
     color: #333;
 }
 
-/* Sadece index.html için büyük görsel */
+.project-gallery {
+    text-align: center; /* Görseli yatayda ortalar */
+}
+
 .project-gallery.index-only img {
     width: 400px;
     height: auto;
+}
+
 }
 
 /* Diğer sayfalardaki proje görselleri */
