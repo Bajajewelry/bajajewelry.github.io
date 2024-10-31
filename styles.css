@@ -1,11 +1,12 @@
-/* Genel stiller */
-
+/* Genel Stiller */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
+/* Navigasyon Menüsü */
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -20,44 +21,61 @@ body {
 
 .navbar ul li {
     display: inline;
-    padding: 15px;
 }
 
 .navbar ul li a {
-    color: #ffffff;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #4CAF50;
 }
 
 .navbar ul li a.active {
     background-color: #4CAF50;
 }
 
-h1, h2, p {
+/* Ana Başlık */
+h1 {
     text-align: center;
-    color: #333;
+    font-size: 2.5em;
+    margin: 20px 0;
 }
 
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+/* Metin Paragrafları */
+p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Proje Galerisi */
 .project-gallery {
     text-align: center; /* Görseli yatayda ortalar */
+    margin: 0 auto;
 }
 
 .project-gallery.index-only img {
-    width: 400px;
+    width: 600px; /* İstenen boyuta göre ayarlandı */
     height: auto;
+    display: inline-block;
 }
 
-}
-
-/* Diğer sayfalardaki proje görselleri */
-.project-gallery img {
-    width: 200px;
-    height: auto;
-}
-
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #333;
-    color: #ffffff;
-    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
 }
