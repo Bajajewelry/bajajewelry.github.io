@@ -39,7 +39,7 @@ h1, h2, p {
 
 /* Sadece index.html için büyük görsel */
 .project-gallery.index-only img {
-    width: 800px;
+    width: 600px;
     height: auto;
 }
 
