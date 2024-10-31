@@ -1,10 +1,13 @@
-/* Temel stilde navbar */
+/* Genel sayfa ayarları */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
+    color: #333;
 }
 
+/* Navbar */
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -12,61 +15,60 @@ body {
 
 .navbar ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
 
-.navbar li {
-    padding: 14px 20px;
+.navbar ul li {
+    display: inline;
 }
 
-.navbar li a {
+.navbar ul li a {
     color: white;
+    padding: 14px 20px;
     text-decoration: none;
     display: block;
 }
 
-.navbar li a.active, .navbar li a:hover {
-    background-color: #575757;
-}
-.index-only img {
-    width: 500px; /* Yalnızca index.html'deki görsel için genişlik */
-    height: auto;
+.navbar ul li a:hover {
+    background-color: #555;
 }
 
-/* İçerik stili */
+.navbar ul li a.active {
+    background-color: #4CAF50;
+}
+
+/* Başlık ve paragraf */
 section {
-    padding: 20px;
+    padding: 60px;
     text-align: center;
 }
 
-.project-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-.project-gallery img {
-    max-width: 200px;
+section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Sadece index.html'deki projeye özgü görsel */
+.index-only img {
+    width: 500px; /* Yalnızca index.html'deki görsel için genişlik */
     height: auto;
+    margin: 10px;
     border-radius: 8px;
-    transition: transform 0.2s ease;
 }
 
-.project-gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Footer stili */
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
 }
