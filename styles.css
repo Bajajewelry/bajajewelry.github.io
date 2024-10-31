@@ -59,16 +59,22 @@ p {
     color: #555;
 }
 
-/* Proje Galerisi */
-.project-gallery {
-    text-align: center; /* Görseli yatayda ortalar */
-    margin: 0 auto;
+/* Index Sayfasındaki Proje Galerisi */
+.project-gallery.index-only {
+    text-align: center;
 }
 
 .project-gallery.index-only img {
-    width: 600px; /* İstenen boyuta göre ayarlandı */
+    width: 600px;
     height: auto;
     display: inline-block;
+}
+
+/* Projects Sayfasındaki Proje Galerisi */
+.project-gallery.projects-only img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
 }
 
 /* Footer */
