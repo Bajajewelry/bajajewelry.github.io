@@ -58,7 +58,7 @@ section p {
 
 /* Sadece index.html'deki projeye özgü görsel */
 .index-only img {
-    width: 500px; /* Yalnızca index.html'deki görsel için genişlik */
+    width: 800px; /* Yalnızca index.html'deki görsel için genişlik daha da artırıldı */
     height: auto;
     margin: 10px;
     border-radius: 8px;
