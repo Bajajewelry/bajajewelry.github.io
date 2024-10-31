@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>BAJA Jewelry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BAJA Jewelry</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="navbar">
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </div>
 
     <section>
-        <h1>Private Custom Jewelry Since 1989</h1>
-        <p>We offer personalized services with our unique jewelry designs. We're here to help you create your perfect piece.</p>
-        <h2>Featured Project</h2>
-        <div class="project-gallery index-only">
-            <img src="images/project1-300.png" alt="Jewelry Design 1">
-        </div>
+        <h2>Contact Us</h2>
+        <p>Feel free to get in touch with us for any inquiries or custom requests!</p>
+
+        <!-- Embedded Formspree form -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="form-link">Send Message</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=your-map-link" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <footer>
