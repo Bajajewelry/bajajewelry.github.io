@@ -49,7 +49,7 @@ section {
 }
 
 .project-gallery img {
-    width: 600px; /* Ana sayfa için resim boyutu */
+    width: 800px; /* Ana sayfa için resim boyutu */
     max-width: 100%;
     height: auto;
     display: block;
