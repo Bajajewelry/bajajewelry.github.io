@@ -61,12 +61,12 @@ p {
 
 /* Proje Galerisi */
 .project-gallery {
-    text-align: center; /* Görseli yatayda ortalar */
-    margin: 0 auto;
+    width: 400px; /* İstenen boyuta göre ayarlandı */
+    height: auto;
 }
 
 .project-gallery.index-only img {
-    width: 200px; /* İstenen boyuta göre ayarlandı */
+    width: 400px; /* İstenen boyuta göre ayarlandı */
     height: auto;
     display: inline-block;
 }
