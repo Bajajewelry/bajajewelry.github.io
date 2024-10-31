@@ -31,6 +31,10 @@ body {
 .navbar li a.active, .navbar li a:hover {
     background-color: #575757;
 }
+.index-only img {
+    width: 500px; /* Yalnızca index.html'deki görsel için genişlik */
+    height: auto;
+}
 
 /* İçerik stili */
 section {
