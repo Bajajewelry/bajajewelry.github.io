@@ -82,7 +82,7 @@ section {
 .index-gallery img {
     display: block;
     margin: 0 auto;
-    width: 1200px; /* Adjusted to make the image larger */
+    width: 1600px; /* Resmin boyutu iki katına çıkarıldı */
     height: auto;
 }
 
