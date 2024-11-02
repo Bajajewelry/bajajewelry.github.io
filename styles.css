@@ -52,8 +52,9 @@ section {
 }
 
 .project-gallery img {
-    width: 200px; /* Adjust image size */
-    height: auto;
+    width: 200px; /* Set consistent width */
+    height: 200px; /* Set consistent height */
+    object-fit: cover; /* Ensures image fills the area without stretching */
     border-radius: 10px;
 }
 
