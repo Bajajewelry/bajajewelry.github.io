@@ -32,3 +32,43 @@
     </footer>
 </body>
 </html>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Static array of Instagram image URLs
+    const images = [
+        'images/insta1.jpg',
+        'images/insta2.jpg',
+        'images/insta3.jpg',
+        'images/insta4.jpg' // Add more images as needed
+    ];
+    
+    let currentIndex = 0;
+    const container = document.querySelector('.slideshow-container');
+
+    // Preload images
+    images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        container.appendChild(img);
+    });
+
+    const imgElements = document.querySelectorAll('.slideshow-container img');
+
+    function showNextImage() {
+        // Remove the active class from the current image
+        imgElements[currentIndex].classList.remove('active');
+
+        // Move to the next image in the array
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // Add the active class to the new current image
+        imgElements[currentIndex].classList.add('active');
+    }
+
+    // Set the first image to be visible
+    imgElements[currentIndex].classList.add('active');
+
+    // Change images every 3 seconds (adjust as needed)
+    setInterval(showNextImage, 3000);
+});
+</script>
