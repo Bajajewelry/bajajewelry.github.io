@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             img.onerror = () => { img.style.display = 'none'; }; // Hide image if it fails to load
 
             gallery.appendChild(img);
-            break;
+            break; // Exit loop after finding the first valid image
         }
     });
 });
