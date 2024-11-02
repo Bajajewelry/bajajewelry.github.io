@@ -52,9 +52,8 @@ section {
 }
 
 .project-gallery img {
-    width: 200px; /* Set consistent width */
-    height: 200px; /* Set consistent height */
-    object-fit: cover; /* Ensures image fills the area without stretching */
+    width: 200px; /* Fixed width for uniform display */
+    height: auto;
     border-radius: 10px;
 }
 
@@ -64,50 +63,4 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-}
-
-/* Form Link Button Styling */
-.form-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.form-link:hover {
-    background-color: #45a049;
-}
-
-/* Center and Enlarge the Image on the Index Page */
-.index-gallery img {
-    display: block;
-    margin: 0 auto;
-    width: 450px; /* Adjusted image size for index page */
-    height: auto;
-}
-
-/* Contact Section and Embedded Form Styling */
-.contact-section {
-    padding: 20px;
-    text-align: center;
-}
-
-.contact-section iframe {
-    width: 100%;
-    max-width: 500px; /* Set a maximum width to fit within smaller screens */
-    height: 500px; /* Reduced height to fit on the screen */
-    border-radius: 8px;
-    border: 1px solid #ccc; /* Optional: subtle border */
-    margin: 0 auto;
-}
-
-/* Additional Adjustments for Contact Form Link */
-.contact-section .form-link {
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 12px 25px;
 }
