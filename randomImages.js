@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const totalImages = 250; // Total number of images in the folder
-    const imagesToShow = 6; // Number of random images to display
+    const imagesToShow = 6;  // Number of random images to display
     const imageFolder = "images/"; // Path to the image folder
     const imagePrefix = "project"; // Prefix used for images
     const possibleExtensions = [".png", ".jpg"]; // Possible image file extensions
-    const gallery = document.getElementById("project-gallery");
+    const gallery = document.getElementById("project-gallery"); // Get the div by its ID
 
     // Generate an array of unique random numbers
     const randomNumbers = [];
@@ -19,27 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
     randomNumbers.forEach(num => {
         const img = document.createElement("img");
         img.classList.add("project-image");
-        let imageLoaded = false;
-        
-        // Try loading each possible extension until one works
-        possibleExtensions.forEach(ext => {
-            if (!imageLoaded) {
-                img.src = `${imageFolder}${imagePrefix}${num}${ext}`;
-                img.onerror = () => img.src = ""; // Clear if not found
-                img.onload = () => imageLoaded = true;
-            }
-        });
-        
-        // Add caption
-        const caption = document.createElement("div");
-        caption.textContent = `Jewelry Design ${num}`;
-        caption.classList.add("caption");
 
-        // Add image and caption to gallery
-        const container = document.createElement("div");
-        container.classList.add("image-container");
-        container.appendChild(img);
-        container.appendChild(caption);
-        gallery.appendChild(container);
+        // Loop through possible extensions to find a valid one
+        for (let ext of possibleExtensions) {
+            img.src = `${imageFolder}${imagePrefix}${num}${ext}`;
+            img.alt = `Jewelry Design ${num}`;
+            
+            img.onerror = () => { img.style.display = 'none'; }; // Hide image if it fails to load
+
+            // Append the image to the gallery div
+            gallery.appendChild(img);
+            break;
+        }
     });
 });
