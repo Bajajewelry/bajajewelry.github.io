@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const img = document.createElement("img");
         img.classList.add("project-image");
 
-        // Loop through possible extensions to find a valid one
         for (let ext of possibleExtensions) {
             img.src = `${imageFolder}${imagePrefix}${num}${ext}`;
             img.alt = `Jewelry Design ${num}`;
