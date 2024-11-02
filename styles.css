@@ -78,11 +78,11 @@ section {
     text-align: center;
 }
 
-/* Center and adjust the image size on the index page */
+/* Center and enlarge the image on the index page */
 .index-gallery img {
     display: block;
     margin: 0 auto;
-    width: 400px; /* Resmi daha küçük yapmak için genişlik ayarlandı */
+    width: 1200px; /* Adjusted to make the image larger */
     height: auto;
 }
 
@@ -91,4 +91,16 @@ section {
     font-size: 18px;
     margin-top: 20px;
     padding: 12px 25px;
+}
+
+/* Contact section and embedded form styling */
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section iframe {
+    max-width: 100%;
+    height: 600px; /* Adjust height as needed */
+    border-radius: 8px;
 }
