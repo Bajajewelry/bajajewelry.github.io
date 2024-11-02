@@ -24,10 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
             img.src = `${imageFolder}${imagePrefix}${num}${ext}`;
             img.alt = `Jewelry Design ${num}`;
             
+            // Set a fallback behavior if the image fails to load
             img.onerror = () => { img.style.display = 'none'; }; // Hide image if it fails to load
 
+            // Append the image to the gallery div
             gallery.appendChild(img);
-            break;
+            break; // Exit loop after finding the first valid image
         }
     });
 });
