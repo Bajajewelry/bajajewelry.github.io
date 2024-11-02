@@ -78,11 +78,11 @@ section {
     text-align: center;
 }
 
-/* Center and enlarge the image on the index page */
+/* Center and adjust the image size on the index page */
 .index-gallery img {
     display: block;
     margin: 0 auto;
-    width: 1600px; /* Resmin boyutu iki katına çıkarıldı */
+    width: 1200px; /* Resmi daha küçük yapmak için genişlik ayarlandı */
     height: auto;
 }
 
