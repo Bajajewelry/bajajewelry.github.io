@@ -82,7 +82,7 @@ section {
 .index-gallery img {
     display: block;
     margin: 0 auto;
-    width: 450px; /* Resmi daha küçük yapmak için genişlik ayarlandı */
+    width: 550px; /* Resmi daha küçük yapmak için genişlik ayarlandı */
     height: auto;
 }
 
