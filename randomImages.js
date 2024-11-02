@@ -20,16 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const img = document.createElement("img");
         img.classList.add("project-image");
 
+        // Try each possible extension to find a valid image file
+        let imageFound = false;
         for (let ext of possibleExtensions) {
             img.src = `${imageFolder}${imagePrefix}${num}${ext}`;
             img.alt = `Jewelry Design ${num}`;
             
-            // Set a fallback behavior if the image fails to load
-            img.onerror = () => { img.style.display = 'none'; }; // Hide image if it fails to load
+            img.onerror = () => { 
+                // If an image fails to load, try the next extension
+                img.src = ""; 
+            };
 
-            // Append the image to the gallery div
-            gallery.appendChild(img);
-            break; // Exit loop after finding the first valid image
+            img.onload = () => {
+                if (!imageFound) {
+                    gallery.appendChild(img);
+                    imageFound = true;
+                }
+            };
+
+            if (imageFound) break; // Stop if an image has been successfully loaded
         }
     });
 });
