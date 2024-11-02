@@ -5,6 +5,7 @@ body {
     padding: 0;
 }
 
+/* Navbar Styling */
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -34,27 +35,25 @@ body {
     border-radius: 5px;
 }
 
-h1, h2 {
+h2 {
     text-align: center;
 }
 
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Project Gallery Styling */
-.project-gallery {
+/* Contact Section Styling */
+.contact-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.project-gallery img {
-    width: 200px; /* Fixed width for uniform display */
-    height: auto;
-    border-radius: 10px;
+.map-section, .form-section {
+    width: 48%; /* Adjust width as needed */
+}
+
+.map-section iframe, .form-section iframe {
+    width: 100%;
+    border-radius: 8px;
+    height: 400px;
 }
 
 /* Footer Styling */
