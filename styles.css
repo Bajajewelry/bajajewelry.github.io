@@ -97,9 +97,9 @@ footer {
 }
 
 .contact-section iframe {
-    width: 80%; /* Set width to 80% of the page */
-    max-width: 600px; /* Set a maximum width for large screens */
-    height: 200px; /* Adjust height as needed */
+    width: 100%;
+    max-width: 500px; /* Set a maximum width to fit within smaller screens */
+    height: 500px; /* Reduced height to fit on the screen */
     border-radius: 8px;
     border: 1px solid #ccc; /* Optional: subtle border */
     margin: 0 auto;
