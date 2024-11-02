@@ -38,6 +38,12 @@ h1, h2 {
     text-align: center;
 }
 
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Project Gallery Styling */
 .project-gallery {
     display: flex;
     justify-content: center;
@@ -46,11 +52,12 @@ h1, h2 {
 }
 
 .project-gallery img {
-    width: 200px;
+    width: 200px; /* Adjust image size */
     height: auto;
     border-radius: 10px;
 }
 
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
@@ -58,6 +65,7 @@ footer {
     padding: 10px;
 }
 
+/* Form Link Button Styling */
 .form-link {
     display: inline-block;
     margin-top: 15px;
@@ -73,27 +81,15 @@ footer {
     background-color: #45a049;
 }
 
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Center and enlarge the image on the index page */
+/* Center and Enlarge the Image on the Index Page */
 .index-gallery img {
     display: block;
     margin: 0 auto;
-    width:450px; /* Adjusted to make the image larger */
+    width: 450px; /* Adjusted image size for index page */
     height: auto;
 }
 
-/* Adjustments for the contact form link */
-.contact-section .form-link {
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 12px 25px;
-}
-
-/* Contact section and embedded form styling */
+/* Contact Section and Embedded Form Styling */
 .contact-section {
     padding: 20px;
     text-align: center;
@@ -103,4 +99,11 @@ section {
     max-width: 100%;
     height: 400px; /* Adjust height as needed */
     border-radius: 8px;
+}
+
+/* Additional Adjustments for Contact Form Link */
+.contact-section .form-link {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 12px 25px;
 }
